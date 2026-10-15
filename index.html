@@ -446,7 +446,7 @@ function drawTrade() {
   const M = D.mcconkey, m25 = M.seasons.find((s) => s.season === CUR - 1), m26 = M.seasons.find((s) => s.season === CUR);
   const mRow = `<tr class="get"><td class="t nm">${esc(M.name)}</td><td>WR · ${esc(M.team)}</td><td>—</td>
     <td>${m25 ? F.d1(m25.ppg) + ` <span class="muted">WR${m25.rank_ppg ?? '—'}</span>` : '—'}</td>
-    <td>${m26 ? F.d1(m26.ppg) + ` <span class="muted">WR${m26.rank_ppg ?? '—'}</span> <span class="muted">${m26.games}g</span>` : '—'}</td>
+    <td>${m26 ? F.d1(m26.ppg) + ` <span class="muted">WR${m26.rank_ppg ?? '—'}</span> <span class="muted">${m26.games}g</span><br><span class="muted">rib Wks 1–2, foot Wk 4, missed Wk 5; 88% of snaps in his one healthy game</span>` : '—'}</td>
     <td class="wrap" colspan="4">Not projected here. The WR study ranks him ${M.rank_p ? ordinal(M.rank_p) : '—'} of ${M.n_candidates} breakout candidates (${F.pct0(M.p_breakout)} model chance; base rate about 5%). <a href="https://leviphillips13-hue.github.io/wr-breakouts/?a=mcconkey&b=collins&v=career">WR page</a></td></tr>`;
   $('#trade-table').innerHTML = `<thead><tr><th class="t">Player</th><th>Pos</th><th>Age</th><th>${CUR - 1} PPR/g</th><th>${CUR} so far</th><th>Rest of ${CUR} PPR/g</th><th>Top-12 RB rest of ${CUR}</th><th>${CUR + 1} PPR/g</th><th>Top-12 RB ${CUR + 1}</th></tr></thead>
     <tbody><tr><td class="t muted" colspan="9">You give</td></tr>${rbRow('cook', 'give')}${rbRow('marks', 'give')}
